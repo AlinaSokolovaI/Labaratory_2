@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ASPM181", "ASPM181.vcxproj", "{98773E39-616E-40F2-8728-F65986645547}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3FF7526C-1EF3-4AB8-B9A8-8947322920C3} = {3FF7526C-1EF3-4AB8-B9A8-8947322920C3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatPart181_2", "MatPart181_2\MatPart181_2.vcxproj", "{3FF7526C-1EF3-4AB8-B9A8-8947322920C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98773E39-616E-40F2-8728-F65986645547}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98773E39-616E-40F2-8728-F65986645547}.Debug|Win32.Build.0 = Debug|Win32
+		{98773E39-616E-40F2-8728-F65986645547}.Release|Win32.ActiveCfg = Release|Win32
+		{98773E39-616E-40F2-8728-F65986645547}.Release|Win32.Build.0 = Release|Win32
+		{3FF7526C-1EF3-4AB8-B9A8-8947322920C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3FF7526C-1EF3-4AB8-B9A8-8947322920C3}.Debug|Win32.Build.0 = Debug|Win32
+		{3FF7526C-1EF3-4AB8-B9A8-8947322920C3}.Release|Win32.ActiveCfg = Release|Win32
+		{3FF7526C-1EF3-4AB8-B9A8-8947322920C3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
