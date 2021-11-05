@@ -8,7 +8,7 @@ void initialization(double array_int_time[], double array_int_data[], int array_
 			matrix_int_data[i][j] = rand() % 255; 
 		}
 	for(int i = 0; i < array_size; i++) 
-		array_int_time[i] = i + i*rand() % 255;
+		array_int_time[i] = i + 1;
 	for(int i = 0; i < array_size; i++) 
-		array_int_data[i] = i-i^2*rand() % 255;
+		array_int_data[i] = rand() % 255;
 }
