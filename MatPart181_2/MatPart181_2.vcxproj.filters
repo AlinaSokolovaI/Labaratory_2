@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="functions181.cpp">
+    <ClCompile Include="functions_matrix181.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="funs_for_matrix_181.cpp">
+    <ClCompile Include="functions_arrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
