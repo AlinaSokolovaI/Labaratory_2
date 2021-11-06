@@ -1,0 +1,3 @@
+﻿  main181.cpp
+d:\учеба\7 семестр\Programming_Tehnology (Pozdyaev)\ASPM181\main181.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  ASPM181.vcxproj -> D:\учеба\7 семестр\Programming_Tehnology (Pozdyaev)\ASPM181\Debug\ASPM181.exe
