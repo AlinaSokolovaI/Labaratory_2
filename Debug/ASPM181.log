@@ -1,5 +1,0 @@
-﻿  main181.cpp
-c:\Users\BR4ECJlAB\Documents\GitHub\Labaratory_2\main181.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Initializations181.cpp
-  Generating Code...
-  ASPM181.vcxproj -> C:\Users\BR4ECJlAB\Documents\GitHub\Labaratory_2\Debug\ASPM181.exe
