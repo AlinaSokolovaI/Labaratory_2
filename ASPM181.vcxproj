@@ -43,11 +43,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>D:\учеба\7 семестр\Programming_Tehnology (Pozdyaev)\boost_1_77_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\BETA\tehn_progr\boost_1_77_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\учеба\7 семестр\Programming_Tehnology (Pozdyaev)\boost_1_77_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\BETA\tehn_progr\boost_1_77_0\stage\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
