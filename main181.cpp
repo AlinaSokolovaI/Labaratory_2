@@ -63,25 +63,25 @@ void main(int argc, const char* argv[]){
 	}
 
 	initialization(array_int_time, array_int_data, array_size,matrix_int_time, matrix_int_data, matrix_size);
-	printf("Вектор data: \n");
+	printf("\nВектор data: \n");
 	output_array(array_int_data, array_size);
-	printf("Вектор time: \n");
+	printf("\nВектор time: \n");
 	output_array(array_int_time, array_size);
-	printf("Прибавление к элементам первого вектора, элементов второго вектора: \n");
+	printf("\nПрибавление к элементам первого вектора, элементов второго вектора: \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("Вычитание веторов: \n");
+	printf("\nВычитание веторов: \n");
 	difference_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("Прибавление к элементам первого вектора, элементов второго вектора начиная с элемента 5: \n");
+	printf("\nПрибавление к элементам первого вектора, элементов второго вектора начиная с элемента 5: \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size,5);
 	output_array(array_int_data, array_size);
 
-	printf("матрица data: \n");
+	printf("\nматрица data: \n");
 	output_matrix(matrix_int_data, matrix_size);
-	printf("матрица time: \n");
+	printf("\nматрица time: \n");
 	output_matrix(matrix_int_time, matrix_size);
-	printf("Прибавление к элементам первой матрицы, элементов второй матрицы: \n");
+	printf("\nПрибавление к элементам первой матрицы, элементов второй матрицы: \n");
 	sum_matrix(matrix_int_data, matrix_int_time, matrix_size);
 	output_matrix(matrix_int_data, matrix_size);
 	
