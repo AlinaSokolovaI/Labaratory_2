@@ -1,6 +1,6 @@
 #include "header181.h"
 #include "MatPart181_2\header_functions181.h"
-
+/*
 #include <boost/program_options.hpp>
 
 using namespace boost::program_options;
@@ -13,14 +13,14 @@ void on_matrix_size(int number)
 {
 	std::cout << "On matrix_size: " << number << '\n';
 }
-
+*/
 void main(int argc, const char* argv[]){
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
 	int default_size = 17;//стандартные значения размеров 
 	int array_size = default_size;
 	int matrix_size = 7;
-	
+	/*
 	try//работа через командную строку
 	{
 		options_description desc{ "Options" };
@@ -51,7 +51,7 @@ void main(int argc, const char* argv[]){
 	{
 		std::cerr << ex.what() << '\n';
 	}
-
+	*/
 	//сама работа с векторами и матрицами
 	double *array_int_time = new double[array_size];
 	double *array_int_data = new double[array_size];
@@ -63,25 +63,25 @@ void main(int argc, const char* argv[]){
 	}
 
 	initialization(array_int_time, array_int_data, array_size,matrix_int_time, matrix_int_data, matrix_size);
-	printf("\nВектор data: \n");
+	printf("Вектор data: \n");
 	output_array(array_int_data, array_size);
-	printf("\nВектор time: \n");
+	printf("Вектор time: \n");
 	output_array(array_int_time, array_size);
-	printf("\nПрибавление к элементам первого вектора, элементов второго вектора: \n");
+	printf("Прибавление к элементам первого вектора, элементов второго вектора: \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("\nВычитание веторов: \n");
+	printf("Вычитание веторов: \n");
 	difference_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("\nПрибавление к элементам первого вектора, элементов второго вектора начиная с элемента 5: \n");
+	printf("Прибавление к элементам первого вектора, элементов второго вектора начиная с элемента 5: \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size,5);
 	output_array(array_int_data, array_size);
 
-	printf("\nматрица data: \n");
+	printf("матрица data: \n");
 	output_matrix(matrix_int_data, matrix_size);
-	printf("\nматрица time: \n");
+	printf("матрица time: \n");
 	output_matrix(matrix_int_time, matrix_size);
-	printf("\nПрибавление к элементам первой матрицы, элементов второй матрицы: \n");
+	printf("Прибавление к элементам первой матрицы, элементов второй матрицы: \n");
 	sum_matrix(matrix_int_data, matrix_int_time, matrix_size);
 	output_matrix(matrix_int_data, matrix_size);
 	
