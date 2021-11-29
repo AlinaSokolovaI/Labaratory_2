@@ -14,7 +14,7 @@ void on_matrix_size(int number)
 	std::cout << "On matrix_size: " << number << '\n';
 }
 */
-void main(int argc, const char* argv[]){
+int main(int argc, const char* argv[]){
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
 	int default_size = 17;//ñòàíäàðòíûå çíà÷åíèÿ ðàçìåðîâ 
@@ -86,6 +86,7 @@ void main(int argc, const char* argv[]){
 	output_matrix(matrix_int_data, matrix_size);
 	
 	system("pause");
+	return 0;
 }
 
 
