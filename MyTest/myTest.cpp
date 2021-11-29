@@ -1,7 +1,7 @@
 #include "pch.h"
-#include "..\MatPart181_2\header_functions181.h"
-// сложение векторов
-TEST(TestArray, Test_sum_array_1) {		// размер вектора №1 < размера вектора №2
+#include "../MatPart181_2/header_functions181.h"
+// Г±Г«Г®Г¦ГҐГ­ГЁГҐ ГўГҐГЄГІГ®Г°Г®Гў
+TEST(TestArray, Test_sum_array_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 < Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[3]{ 1, 0, -4 };
 	double* array2 = new double[4]{ 2, -5, 17, 3 };
 	double* result = new double[3]{ 3, -5, 13 };
@@ -14,7 +14,7 @@ TEST(TestArray, Test_sum_array_1) {		// размер вектора №1 < размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_2) {		// размер вектора №1 > размера вектора №2
+TEST(TestArray, Test_sum_array_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[4]{ 13, -7, -4,  6 };
 	double* array2 = new double[3]{ 0, 5, 17 };
 	double* result = new double[4]{ 13, -2, 13, 6 };
@@ -27,7 +27,7 @@ TEST(TestArray, Test_sum_array_2) {		// размер вектора №1 > размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_3) {		// размер вектора №1 = размеру вектора №2
+TEST(TestArray, Test_sum_array_3) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[5]{ 15, 7, -4,  6 , 1 };
 	double* array2 = new double[5]{ 0, 0, 17, 4, 0 };
 	double* result = new double[5]{ 15, 7, 13, 10, 1 };
@@ -41,8 +41,8 @@ TEST(TestArray, Test_sum_array_3) {		// размер вектора №1 = размеру вектора №2
 	delete[] result;
 }
 
-// добавление к вектору №1 элементов вектора №2 начиная с n-го элемента
-TEST(TestArray, Test_sum_array_4_1) {		// размер вектора №1 < размера вектора №2 (добавление с 1 элемента)
+// Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄ ГўГҐГЄГІГ®Г°Гі В№1 ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГўГҐГЄГІГ®Г°Г  В№2 Г­Г Г·ГЁГ­Г Гї Г± n-ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ 
+TEST(TestArray, Test_sum_array_4_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 < Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± 1 ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[3]{ 1, 0, -4 };
 	double* array2 = new double[4]{ 2, -5, 17, 3 };
 	double* result = new double[3]{ 3, -5, 13 };
@@ -55,7 +55,7 @@ TEST(TestArray, Test_sum_array_4_1) {		// размер вектора №1 < размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_4_2) {		// размер вектора №1 < размера вектора №2 (добавление с последнего элемента)
+TEST(TestArray, Test_sum_array_4_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 < Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[3]{ 1, 0, -4 };
 	double* array2 = new double[4]{ 2, -5, 17, 3 };
 	double* result = new double[3]{ 1, 0, -2 };
@@ -68,7 +68,7 @@ TEST(TestArray, Test_sum_array_4_2) {		// размер вектора №1 < размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_5_1) {		// размер вектора №1 > размера вектора №2 (добавление с 1 элемента)
+TEST(TestArray, Test_sum_array_5_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± 1 ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[6]{ 13, -7, -4, 6, 5, 4 };
 	double* array2 = new double[2]{ 0, 5 };
 	double* result = new double[6]{ 13, -2, -4, 6, 5, 4 };
@@ -81,7 +81,7 @@ TEST(TestArray, Test_sum_array_5_1) {		// размер вектора №1 > размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_5_2) {		// размер вектора №1 > размера вектора №2 (добавление с 3 элемента)
+TEST(TestArray, Test_sum_array_5_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± 3 ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[6]{ 13, -7, -4, 6, 5, 4};
 	double* array2 = new double[2]{ 0, 5};
 	double* result = new double[6]{ 13, -7, -4, 11, 5, 4};
@@ -94,7 +94,7 @@ TEST(TestArray, Test_sum_array_5_2) {		// размер вектора №1 > размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_5_3) {		// размер вектора №1 > размера вектора №2 (добавление с последнего элемента)
+TEST(TestArray, Test_sum_array_5_3) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[6]{ 13, -7, -4, 6, 7, 4 };
 	double* array2 = new double[2]{ 1, 5 };
 	double* result = new double[6]{ 13, -7, -4, 6, 7, 5 };
@@ -107,7 +107,7 @@ TEST(TestArray, Test_sum_array_5_3) {		// размер вектора №1 > размера вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_6_1) {		// размер вектора №1 = размеру вектора №2 (добавление с 1 элемента)
+TEST(TestArray, Test_sum_array_6_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± 1 ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[4]{ 13, -7, -4, 0 };
 	double* array2 = new double[4]{ 1, 5, 1, -1};
 	double* result = new double[4]{ 14, -2, -3, -1 };
@@ -120,7 +120,7 @@ TEST(TestArray, Test_sum_array_6_1) {		// размер вектора №1 = размеру вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_6_2) {		// размер вектора №1 = размеру вектора №2 (добавление со 2 элемента)
+TEST(TestArray, Test_sum_array_6_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г±Г® 2 ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[4]{ 13, -7, -4, 0 };
 	double* array2 = new double[4]{ 1, 5, 1, -1 };
 	double* result = new double[4]{ 13, -6, 1, 1 };
@@ -133,7 +133,7 @@ TEST(TestArray, Test_sum_array_6_2) {		// размер вектора №1 = размеру вектора №2
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_sum_array_6_3) {		// размер вектора №1 = размеру вектора №2 (добавление с последнего элемента)
+TEST(TestArray, Test_sum_array_6_3) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2 (Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г± ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ )
 	double* array1 = new double[4]{ 13, -7, -4, 0 };
 	double* array2 = new double[4]{ 1, 5, 1, -1 };
 	double* result = new double[4]{ 13, -7, -4, 1 };
@@ -147,8 +147,8 @@ TEST(TestArray, Test_sum_array_6_3) {		// размер вектора №1 = размеру вектора №2
 	delete[] result;
 }
 
-// разность векторов
-TEST(TestArray, Test_difference_array_1) {		// размер вектора №1 < размера вектора №2
+// Г°Г Г§Г­Г®Г±ГІГј ГўГҐГЄГІГ®Г°Г®Гў
+TEST(TestArray, Test_difference_array_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 < Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[3]{ 1, 0, -4 };
 	double* array2 = new double[4]{ 2, -5, 17, 3 };
 	double* result = new double[3]{ -1, 5, -21 };
@@ -161,7 +161,7 @@ TEST(TestArray, Test_difference_array_1) {		// размер вектора №1 < размера векто
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_difference_array_2) {		// размер вектора №1 > размера вектора №2
+TEST(TestArray, Test_difference_array_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[4]{ 13, -7, -4,  6 };
 	double* array2 = new double[3]{ 0, 5, 17 };
 	double* result = new double[4]{ 13, -12, -21, 6 };
@@ -174,7 +174,7 @@ TEST(TestArray, Test_difference_array_2) {		// размер вектора №1 > размера векто
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_difference_array_3) {		// размер вектора №1 = размеру вектора №2
+TEST(TestArray, Test_difference_array_3) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[5]{ 15, 7, -4,  6 , 1 };
 	double* array2 = new double[5]{ 0, 0, 17, 4, 0 };
 	double* result = new double[5]{ 15, 7, -21, 2, 1 };
@@ -188,8 +188,8 @@ TEST(TestArray, Test_difference_array_3) {		// размер вектора №1 = размеру векто
 	delete[] result;
 }
 
-//поэлементное перемножение векторов
-TEST(TestArray, Test_multiplication_array_1) {		// размер вектора №1 < размера вектора №2
+//ГЇГ®ГЅГ«ГҐГ¬ГҐГ­ГІГ­Г®ГҐ ГЇГҐГ°ГҐГ¬Г­Г®Г¦ГҐГ­ГЁГҐ ГўГҐГЄГІГ®Г°Г®Гў
+TEST(TestArray, Test_multiplication_array_1) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 < Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[3]{ 1, 0, -4 };
 	double* array2 = new double[4]{ 2, -5, 17, 3 };
 	double* result = new double[3]{ 2, 0, -68 };
@@ -202,7 +202,7 @@ TEST(TestArray, Test_multiplication_array_1) {		// размер вектора №1 < размера в
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_multiplication_array_2) {		// размер вектора №1 > размера вектора №2
+TEST(TestArray, Test_multiplication_array_2) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 > Г°Г Г§Г¬ГҐГ°Г  ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[4]{ 13, -7, -4,  6 };
 	double* array2 = new double[3]{ 0, 5, 17 };
 	double* result = new double[4]{ 0, -35, -68, 6 };
@@ -215,7 +215,7 @@ TEST(TestArray, Test_multiplication_array_2) {		// размер вектора №1 > размера в
 	delete[] array2;
 	delete[] result;
 }
-TEST(TestArray, Test_multiplication_array_3) {		// размер вектора №1 = размеру вектора №2
+TEST(TestArray, Test_multiplication_array_3) {		// Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г  В№1 = Г°Г Г§Г¬ГҐГ°Гі ГўГҐГЄГІГ®Г°Г  В№2
 	double* array1 = new double[5]{ 15, 7, 4,  6 , 1 };
 	double* array2 = new double[5]{ 0, 0, 17, 4, 0 };
 	double* result = new double[5]{ 0, 0, 68, 24, 0 };
@@ -229,7 +229,7 @@ TEST(TestArray, Test_multiplication_array_3) {		// размер вектора №1 = размеру в
 	delete[] result;
 }
 
-// сложение матриц
+// Г±Г«Г®Г¦ГҐГ­ГЁГҐ Г¬Г ГІГ°ГЁГ¶
 TEST(TestMatrix, Test_sum_matrix) {
 	double** matrix1 = new double* [2];
 	double** matrix2 = new double* [2];
@@ -268,7 +268,7 @@ TEST(TestMatrix, Test_sum_matrix) {
 	delete[] result;
 }
 
-// разность матриц
+// Г°Г Г§Г­Г®Г±ГІГј Г¬Г ГІГ°ГЁГ¶
 TEST(TestMatrix, Test_difference_matrix) {
 	double** matrix1 = new double* [2];
 	double** matrix2 = new double* [2];
