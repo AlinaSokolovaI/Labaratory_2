@@ -1,5 +1,5 @@
 #include "header181.h"
-#include "MatPart181_2\header_functions181.h"
+#include "MatPart181_2/header_functions181.h"
 /*
 #include <boost/program_options.hpp>
 
@@ -17,17 +17,17 @@ void on_matrix_size(int number)
 void main(int argc, const char* argv[]){
 	setlocale(LC_ALL, "rus");
 	srand(time(NULL));
-	int default_size = 17;//стандартные значения размеров 
+	int default_size = 17;//Г±ГІГ Г­Г¤Г Г°ГІГ­Г»ГҐ Г§Г­Г Г·ГҐГ­ГЁГї Г°Г Г§Г¬ГҐГ°Г®Гў 
 	int array_size = default_size;
 	int matrix_size = 7;
 	/*
-	try//работа через командную строку
+	try//Г°Г ГЎГ®ГІГ  Г·ГҐГ°ГҐГ§ ГЄГ®Г¬Г Г­Г¤Г­ГіГѕ Г±ГІГ°Г®ГЄГі
 	{
 		options_description desc{ "Options" };
 		desc.add_options()
 			("help,h", "Help screen")
-			("array_size", value<int>()->notifier(on_array_size), "Array_size")//размер векторов
-			("matrix_size", value<int>()->notifier(on_matrix_size), "Matrix_size");//размер матриц
+			("array_size", value<int>()->notifier(on_array_size), "Array_size")//Г°Г Г§Г¬ГҐГ° ГўГҐГЄГІГ®Г°Г®Гў
+			("matrix_size", value<int>()->notifier(on_matrix_size), "Matrix_size");//Г°Г Г§Г¬ГҐГ° Г¬Г ГІГ°ГЁГ¶
 
 		variables_map vm;
 
@@ -37,13 +37,13 @@ void main(int argc, const char* argv[]){
 			std::cout << desc << '\n';
 		else if (vm.count("array_size")) {
 			std::cout << "Array_size: " << vm["array_size"].as<int>() << '\n';
-			array_size = vm["array_size"].as<int>();//записываем в наш размер значение из командной строки
+			array_size = vm["array_size"].as<int>();//Г§Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў Г­Г Гё Г°Г Г§Г¬ГҐГ° Г§Г­Г Г·ГҐГ­ГЁГҐ ГЁГ§ ГЄГ®Г¬Г Г­Г¤Г­Г®Г© Г±ГІГ°Г®ГЄГЁ
 		}
 		if (vm.count("help"))
 			std::cout << desc << '\n';
 		else if (vm.count("matrix_size")) {
 			std::cout << "Matrix_size: " << vm["matrix_size"].as<int>() << '\n';
-			matrix_size = vm["matrix_size"].as<int>();//записываем в наш размер значение из командной строки
+			matrix_size = vm["matrix_size"].as<int>();//Г§Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў Г­Г Гё Г°Г Г§Г¬ГҐГ° Г§Г­Г Г·ГҐГ­ГЁГҐ ГЁГ§ ГЄГ®Г¬Г Г­Г¤Г­Г®Г© Г±ГІГ°Г®ГЄГЁ
 		}
 		
 	}
@@ -52,7 +52,7 @@ void main(int argc, const char* argv[]){
 		std::cerr << ex.what() << '\n';
 	}
 	*/
-	//сама работа с векторами и матрицами
+	//Г±Г Г¬Г  Г°Г ГЎГ®ГІГ  Г± ГўГҐГЄГІГ®Г°Г Г¬ГЁ ГЁ Г¬Г ГІГ°ГЁГ¶Г Г¬ГЁ
 	double *array_int_time = new double[array_size];
 	double *array_int_data = new double[array_size];
 	double **matrix_int_time = new double*[matrix_size];
@@ -63,25 +63,25 @@ void main(int argc, const char* argv[]){
 	}
 
 	initialization(array_int_time, array_int_data, array_size,matrix_int_time, matrix_int_data, matrix_size);
-	printf("Вектор data: \n");
+	printf("Г‚ГҐГЄГІГ®Г° data: \n");
 	output_array(array_int_data, array_size);
-	printf("Вектор time: \n");
+	printf("Г‚ГҐГЄГІГ®Г° time: \n");
 	output_array(array_int_time, array_size);
-	printf("Прибавление к элементам первого вектора, элементов второго вектора: \n");
+	printf("ГЏГ°ГЁГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ ГЇГҐГ°ГўГ®ГЈГ® ГўГҐГЄГІГ®Г°Г , ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГўГІГ®Г°Г®ГЈГ® ГўГҐГЄГІГ®Г°Г : \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("Вычитание веторов: \n");
+	printf("Г‚Г»Г·ГЁГІГ Г­ГЁГҐ ГўГҐГІГ®Г°Г®Гў: \n");
 	difference_array(array_int_data, array_int_time, array_size, array_size);
 	output_array(array_int_data, array_size);
-	printf("Прибавление к элементам первого вектора, элементов второго вектора начиная с элемента 5: \n");
+	printf("ГЏГ°ГЁГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ ГЇГҐГ°ГўГ®ГЈГ® ГўГҐГЄГІГ®Г°Г , ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГўГІГ®Г°Г®ГЈГ® ГўГҐГЄГІГ®Г°Г  Г­Г Г·ГЁГ­Г Гї Г± ГЅГ«ГҐГ¬ГҐГ­ГІГ  5: \n");
 	sum_array(array_int_data, array_int_time, array_size, array_size,5);
 	output_array(array_int_data, array_size);
 
-	printf("матрица data: \n");
+	printf("Г¬Г ГІГ°ГЁГ¶Г  data: \n");
 	output_matrix(matrix_int_data, matrix_size);
-	printf("матрица time: \n");
+	printf("Г¬Г ГІГ°ГЁГ¶Г  time: \n");
 	output_matrix(matrix_int_time, matrix_size);
-	printf("Прибавление к элементам первой матрицы, элементов второй матрицы: \n");
+	printf("ГЏГ°ГЁГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄ ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ ГЇГҐГ°ГўГ®Г© Г¬Г ГІГ°ГЁГ¶Г», ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГўГІГ®Г°Г®Г© Г¬Г ГІГ°ГЁГ¶Г»: \n");
 	sum_matrix(matrix_int_data, matrix_int_time, matrix_size);
 	output_matrix(matrix_int_data, matrix_size);
 	
