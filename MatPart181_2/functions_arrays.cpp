@@ -1,27 +1,27 @@
 #include "header_functions181.h"
-//ïðèáàâëåíèå ê ýëåìåíòàì ïåðâîãî âåêòîðà, ýëåìåíòîâ âòîðîãî âåêòîðà
-void sum_array(double *array_sum1, double *array_sum2, int array_size1, int array_size2) {
-	//åñëè óêàçàíû 4 ïåðâûõ ïàðàìåòðà, òî ê ýëåìåíòàì ïåðâîãî ïî ïîðÿäêó áóäóò 
-	//äîáàâëåíû ýëåìåíòû âòîðîãî âåðêòîðà, à åñëè óêàçàòü 5 ïàðàìåðò, òî îí ïîêàçûâàåò
-	//ñ êàêîãî ýëåìåíòà íà÷èíàòü ïðèáàâëÿòü çíà÷åíèÿ
-	if(array_size1>= array_size2)
+//Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ðº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°, ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°
+void sum_array(double* array_sum1, double* array_sum2, int array_size1, int array_size2) {
+	//ÐµÑÐ»Ð¸ ÑƒÐºÐ°Ð·Ð°Ð½Ñ‹ 4 Ð¿ÐµÑ€Ð²Ñ‹Ñ… Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°, Ñ‚Ð¾ Ðº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ð¿Ð¾ Ð¿Ð¾Ñ€ÑÐ´ÐºÑƒ Ð±ÑƒÐ´ÑƒÑ‚ 
+	//Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð²ÐµÑ€ÐºÑ‚Ð¾Ñ€Ð°, Ð° ÐµÑÐ»Ð¸ ÑƒÐºÐ°Ð·Ð°Ñ‚ÑŒ 5 Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€, Ñ‚Ð¾ Ð¾Ð½ Ð¿Ð¾ÐºÐ°Ð·Ñ‹Ð²Ð°ÐµÑ‚,
+	//Ñ ÐºÐ°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½Ð°Ñ‡Ð¸Ð½Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÑÑ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ
+	if (array_size1 >= array_size2)
 		for (int i = 0; i < array_size2; i++)
 			array_sum1[i] += array_sum2[i];
 	else for (int i = 0; i < array_size1; i++)
-			array_sum1[i] += array_sum2[i];
+		array_sum1[i] += array_sum2[i];
 }
 void sum_array(double* array_sum1, double* array_sum2, int array_size1, int array_size2, int start_sum) {
-	//åñëè óêàçàíû 4 ïåðâûõ ïàðàìåòðà, òî ê ýëåìåíòàì ïåðâîãî ïî ïîðÿäêó áóäóò 
-	//äîáàâëåíû ýëåìåíòû âòîðîãî âåðêòîðà, à åñëè óêàçàòü 5 ïàðàìåðò, òî îí ïîêàçûâàåò
-	//ñ êàêîãî ýëåìåíòà íà÷èíàòü ïðèáàâëÿòü çíà÷åíèÿ (íà÷èíàÿ ñ 0)
+	//ÐµÑÐ»Ð¸ ÑƒÐºÐ°Ð·Ð°Ð½Ñ‹ 4 Ð¿ÐµÑ€Ð²Ñ‹Ñ… Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°, Ñ‚Ð¾ Ðº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ð¿Ð¾ Ð¿Ð¾Ñ€ÑÐ´ÐºÑƒ Ð±ÑƒÐ´ÑƒÑ‚ 
+	//Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð²ÐµÑ€ÐºÑ‚Ð¾Ñ€Ð°, Ð° ÐµÑÐ»Ð¸ ÑƒÐºÐ°Ð·Ð°Ñ‚ÑŒ 5 Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€, Ñ‚Ð¾ Ð¾Ð½ Ð¿Ð¾ÐºÐ°Ð·Ñ‹Ð²Ð°ÐµÑ‚,
+	//Ñ ÐºÐ°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½Ð°Ñ‡Ð¸Ð½Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÑÑ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ (Ð½Ð°Ñ‡Ð¸Ð½Ð°Ñ Ñ 0)
 	if (array_size1 >= array_size2)
-		for (int i = start_sum; i < array_size2; i++)
-			array_sum1[i] += array_sum2[i];
+		for (int i = start_sum; i < array_size2 + start_sum && i < array_size1; i++)
+			array_sum1[i] += array_sum2[i - start_sum];
 	else for (int i = start_sum; i < array_size1; i++)
-		array_sum1[i] += array_sum2[i-start_sum];
+		array_sum1[i] += array_sum2[i - start_sum];
 }
 
-//âûâîä âåêòîðà íà ýêðàí
+//Ð²Ñ‹Ð²Ð¾Ð´ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° Ð½Ð° ÑÐºÑ€Ð°Ð½
 void output_array(double* array_numb, int array_size) {
 	for (int i = 0; i < array_size; i++) {
 		if (i % 10 == 0) printf("\n");
@@ -29,7 +29,7 @@ void output_array(double* array_numb, int array_size) {
 	}
 	printf("\n");
 }
-//ðàçíîñòü äâóõ âåêòîðîâ
+//Ñ€Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ Ð´Ð²ÑƒÑ… Ð²ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð²
 void difference_array(double* array_sum1, double* array_sum2, int array_size1, int array_size2) {
 	if (array_size1 >= array_size2)
 		for (int i = 0; i < array_size2; i++)
@@ -37,7 +37,7 @@ void difference_array(double* array_sum1, double* array_sum2, int array_size1, i
 	else for (int i = 0; i < array_size1; i++)
 		array_sum1[i] -= array_sum2[i];
 }
-//ïîýëåìåíòíîå ïåðåìíîæåíèå äâóõ âåêòîðîâ
+//Ð¿Ð¾ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð½Ð¾Ðµ Ð¿ÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð´Ð²ÑƒÑ… Ð²ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð²
 void multiplication_array(double* array_sum1, double* array_sum2, int array_size1, int array_size2) {
 	if (array_size1 >= array_size2)
 		for (int i = 0; i < array_size2; i++)
@@ -45,14 +45,3 @@ void multiplication_array(double* array_sum1, double* array_sum2, int array_size
 	else for (int i = 0; i < array_size1; i++)
 		array_sum1[i] *= array_sum2[i];
 }
-//
-
-//
-
-// 
-
-// 
-
-// 
-
-//
